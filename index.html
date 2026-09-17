@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f6f6b">
+<meta name="description" content="体外循環技術認定士対策問題集(全19章390問)を分野別練習・模擬試験モードで学習できるアプリ">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <title>体外循環技術認定士 対策問題集</title>
 <style>
   :root{
@@ -571,6 +580,8 @@
   [hidden]{display:none !important;}
 </style>
 
+</head>
+<body>
 <div id="app">
 
   <!-- ============ HOME ============ -->
@@ -1105,3 +1116,11 @@
   updatePoolNote();
 })();
 </script>
+
+<script>
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(()=>{}));
+}
+</script>
+</body>
+</html>
